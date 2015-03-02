@@ -1,15 +1,15 @@
 /*
 Theme Name: Dazzling
 Theme URI: http://colorlib.com/wp/themes/dazzling
-Author: Colorlib
+Author: Colorlib, Jordan Kicklighter
 Author URI: http://colorlib.com/wp/
-Description: Dazzling is a clean, modern, minimal and fully responsive flat design WordPress WooCommerce theme well suited for blogs, static and ecommerce websites. Theme can be used for travel, corporate, portfolio, photography, green thinking, nature, health, personal and any other creative and minimalistic style website. Dazzling theme is highly customizable with unlimited color options, slider, call for action button, several widget areas and much more that can be adjusted via Theme Options. The theme is built using Bootstrap 3, which makes it responsive and mobile friendly. It features infinite scroll, SEO friendly structure, logo upload, full-screen slider, call for action section, social media icons, popular post widget and translation ready setup. This theme supports WooCommerce and Jigoshop ecommerce plugins. Dazzling is also available in Mexican Spanish, Brazilian Portuguese, Finnish, Swedish, Dutch, Hungarian, German, Persian and Polish. It is probably the best free WordPress theme built for eStores and business websites.
-Version: 1.4.4
+Description: Modified version of the Dazzling theme for the Eta Sigma chapter of Kappa Kappa Psi
+Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: dazzling
 Domain Path: /languages/
-Tags: green, light, white, gray, black, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, responsive-layout, photoblogging, left-sidebar, translation-ready, custom-background, custom-colors, custom-menu, featured-images, full-width-template, post-formats, theme-options, threaded-comments
+Tags: blue, light, white, gray, black, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, responsive-layout, photoblogging, left-sidebar, translation-ready, custom-background, custom-colors, custom-menu, featured-images, full-width-template, post-formats, theme-options, threaded-comments
 
 
 This theme, like WordPress, is licensed under the GPL.
@@ -48,7 +48,7 @@ body {
 }
 
 a {
-  color: #1FA67A;
+  color: #09268a;
   text-decoration: none;
   -webkit-transition: all 0.2s;
      -moz-transition: all 0.2s;
@@ -69,7 +69,7 @@ a:focus {
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: #1FA67A;
+  color: #09268a;
 }
 
 h1,
@@ -288,7 +288,7 @@ textarea {
 .entry-meta .fa {
   font-size: 14px;
   margin-right: 3px;
-  color: #1FA67A;
+  color: #09268a;
 }
 .entry-meta span {
   margin-right: 10px;
@@ -306,13 +306,13 @@ textarea {
 .btn.btn-default.read-more {
   float: right;
   border: 1px solid #E8E8E8;
-  color: #1FA67A;
+  color: #09268a;
   background-color: transparent;
   margin-top: 10px;
 }
 .btn.btn-default.read-more:hover {
   color: #FFF;
-  background-color: #1FA67A;
+  background-color: #09268a;
 }
 .search .btn.btn-default.read-more {
   float: none;
@@ -328,7 +328,7 @@ hr.section-divider {
 .page-links span {
   display: inline-block;
   color: #fff;
-  background-color: #1FA67A;
+  background-color: #09268a;
   border-radius: 4px;
   padding: 2px 10px;
   margin-left: 2px;
@@ -336,15 +336,15 @@ hr.section-divider {
 .page-links a span {
   background-color: inherit;
   border: 1px solid #E8E8E8;
-  color: #1FA67A;
+  color: #09268a;
   -webkit-transition: all 0.2s;
      -moz-transition: all 0.2s;
        -o-transition: all 0.2s;
           transition: all 0.2s;
 }
 .page-links a:hover span {
-  background-color: #1FA67A;
-  border: 1px solid #1FA67A;
+  background-color: #09268a;
+  border: 1px solid #09268a;
   color: #fff;
 }
 /* =Asides
@@ -509,14 +509,14 @@ li.recentcomments {
   float: left;
   padding-right: 10px;
   font-size: 20px;
-  color: #1FA67A;
+  color: #09268a;
 }
 
 /* =Buttons
 ----------------------------------------------- */
 .btn-default, .label-default {
-  background-color: #1FA67A;
-  border-color: #1FA67A;
+  background-color: #09268a;
+  border-color: #09268a;
 }
 .btn-default:hover, .label-default[href]:hover, .label-default[href]:focus, .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, #image-navigation .nav-previous a:hover, #image-navigation .nav-next a:hover {
   background-color: #1b926c;
@@ -547,14 +547,14 @@ li.recentcomments {
   padding: 12px;
   background: transparent;
   border: 1px solid #E8E8E8;
-  color: #1FA67A;
+  color: #09268a;
   -webkit-transition: all 0.2s;
      -moz-transition: all 0.2s;
        -o-transition: all 0.2s;
           transition: all 0.2s;
 }
 #infinite-handle span:hover {
-  background-color: #1FA67A;
+  background-color: #09268a;
   color: #fff;
 }
 .woocommerce #infinite-handle {
@@ -589,7 +589,7 @@ li.recentcomments {
 .site-main [class*="navigation"] a:hover,
 .more-link:hover {
   color: #fff;
-  background: #1FA67A;
+  background: #09268a;
   text-decoration: none;
 }
 .more-link {
@@ -619,7 +619,7 @@ li.recentcomments {
   line-height: 30px;
 }
 .navbar > .container .navbar-brand {
-  color: #1FA67A;
+  color: #fff;
   font-size: 24px;
   margin: 8px 0;
 }
@@ -647,8 +647,8 @@ li.recentcomments {
 .dropdown-menu > li > a:focus,
 .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
 .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-  color: #fff;
-  background-color: #1FA67A;
+  color: #000;
+  background-color: #fff;
 }
 .navbar-default .navbar-nav .open .dropdown-menu > li > a {
   color: #999;
@@ -668,7 +668,7 @@ li.recentcomments {
 }
 .dropdown-menu > .active > a,
 .navbar-default .navbar-nav .open .dropdown-menu > .active > a {
-  background-color: #1FA67A;
+  background-color: #09268a;
   color: #fff;
 }
 
@@ -784,7 +784,7 @@ p.logged-in-as {
 }
 #image-navigation .nav-previous a:hover,
 #image-navigation .nav-next a:hover{
-  background-color: #1FA67A;
+  background-color: #09268a;
   color: #fff;
 }
 #image-navigation .nav-previous,
@@ -836,7 +836,7 @@ p.logged-in-as {
 }
 .footer-nav.nav > li {
   position: relative;
-  display: inline-table;
+  display: inline-block;
 }
 .footer-nav.nav {
   float: left;
@@ -887,7 +887,7 @@ p.logged-in-as {
           transition: background-color 0.1s linear;
 }
 .scroll-to-top:hover {
-  background: #1FA67A;
+  background: #09268a;
   opacity: .8;
 }
 
@@ -964,7 +964,7 @@ p.logged-in-as {
 
 .cfa{
   padding: 30px 0px;
-  background: #1FA67A;
+  background: #09268a;
   text-align: center;
 }
 .cfa-text{
@@ -985,8 +985,8 @@ p.logged-in-as {
 }
 .cfa-button:hover {
     background-color: #fff;
-    color: #1FA67A;
+    color: #09268a;
 }
 .cfa-button:hover a {
-    color: #1FA67A;
+    color: #09268a;
 }
