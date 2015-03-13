@@ -467,19 +467,30 @@ li.recentcomments {
   width: 60px;
   height: 60px;
 }
+.tab-content h2 {
+  color: #09268a;
+  border: 1px solid #E8E8E8;
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding: 10px 0;
+  text-align: center;
+}
+.tab-content ul {
+  padding: 10px 0;
+}
 .tab-content li {
   overflow: hidden;
   list-style: none;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #E8E8E8;
   margin: 0 0 8px;
-  padding: 0 0 6px;
+  padding: 0 10px 6px;
 }
 .tab-content .tab-entry {
   display: block;
 }
 .tab-content > .active {
   border: 1px solid #E8E8E8;
-  border-top: none;
+  /*border-top: none;*/
 }
 .tab-content ul li:last-child {
   border-bottom: 0;
