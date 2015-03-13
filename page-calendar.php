@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Full-width(no sidebar)
+ * Template Name: Calendar
  *
  * This is the template that displays full width page without sidebar
  *
@@ -9,22 +9,18 @@
 
 get_header(); ?>
 <div id="content" class="site-content container">
-	<div id="primary" class="content-area col-sm-12 col-md-12">
+<h1 class="calendar-title"><?php the_title(); ?></h1>
+<hr class="calendar-divider">
+
+	<!-- Sidebar with editable content -->
+	<div id="secondary" class="widget-area col-sm-12 col-md-3 calendar-sidebar" role="complementary">
+		<?php while ( have_posts() ) : the_post(); the_content(); endwhile; ?>
+	</div>
+
+	<!-- The actual calendar -->
+	<div id="primary" class="content-area col-sm-12 col-md-9">
 		<main id="main" class="site-main" role="main">
-
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php get_template_part( 'content', 'page' ); ?>
-
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template
-					if ( comments_open() || '0' != get_comments_number() ) :
-						comments_template();
-					endif;
-				?>
-
-			<?php endwhile; // end of the loop. ?>
-
+			<?php get_template_part( 'content', 'calendar' ); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
