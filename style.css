@@ -326,6 +326,36 @@ textarea {
   font-weight: bold;
 }
 
+h1.entry-title.resources-title {
+  color: black;
+}
+
+.resources-content p {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-weight: bold;
+  font-size: 28px;
+  color: black;
+}
+
+.resources-content ul {
+  padding-left: 10px;
+  margin-bottom: 30px;
+}
+
+.resources-content ul:last-child {
+  margin-bottom: 0;
+}
+
+.resources-content ul li {
+  list-style-type: none;
+}
+
+.resources-content ul li a {
+  font-weight: normal;
+  font-size: 18px;
+}
+
 /* =Post styling
 ----------------------------------------------- */
 .entry-meta a {
