@@ -2,7 +2,7 @@
 /**
  * Template Name: Resources
  *
- * This is the template that displays full width page without sidebar
+ * This is the template that displays full width page with resource links
  *
  * @package dazzling
  */
