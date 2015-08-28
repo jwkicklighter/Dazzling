@@ -356,6 +356,22 @@ h1.entry-title.resources-title {
   font-size: 18px;
 }
 
+.rush-content .page-header {
+  text-align: center;
+}
+
+.rush-content ul {
+  padding-left: 0px;
+}
+
+.rush-content li {
+  list-style: none;
+}
+
+.rush-content img {
+  margin-top: 21px;
+}
+
 /* =Post styling
 ----------------------------------------------- */
 .entry-meta a {
