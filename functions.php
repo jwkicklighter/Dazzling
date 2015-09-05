@@ -266,3 +266,63 @@ if ( class_exists( 'jigoshop' ) ) {
  */
 require get_template_directory() . '/inc/jigoshop-setup.php';
 }
+
+/**
+ * Custom Meta Boxes
+ */
+if ( file_exists(  __DIR__ . '/cmb2/init.php' ) ) {
+  require_once  __DIR__ . '/cmb2/init.php';
+} elseif ( file_exists(  __DIR__ . '/CMB2/init.php' ) ) {
+  require_once  __DIR__ . '/CMB2/init.php';
+}
+
+$elected_positions = array(
+  'none'                  => 'None',
+  'president'             => 'President',
+  'vice_president'        => 'Vice President',
+  'treasurer'             => 'Treasurer',
+  'secretary'             => 'Secretary',
+  'logistics_coordinator' => 'Logistics Coordinator',
+  'member_at_large'       => 'Member at Large',
+  'sergeant_at_arms'      => 'Sergeant at Arms',
+  'historian'             => 'Historian',
+  'alumni_secretary'      => 'Alumni Secretary',
+  'chaplain'              => 'Chaplain',
+  'sponsor'               => 'Sponsor'
+);
+
+$appointed_positions = array(
+  'none'         => 'None',
+  'publications' => 'Publications Committee Chair'
+);
+
+function user_meta_boxes() {
+  $prefix = '_etasigma_';
+
+  $cmb_user = new_cmb2_box( array(
+    'id'               => $prefix . 'edit',
+    'title'            => __( 'Eta Sigma Info', 'cmb2' ),
+    'object_types'     => array( 'user' ),
+    'show_names'       => true,
+    'new_user_section' => 'add-new-user'
+  ) );
+  $cmb_user->add_field( array(
+    'name'     => __( 'Eta Sigma Info', 'cmb2' ),
+    'id'       => $prefix . 'user',
+    'type'     => 'title',
+    'on_front' => false,
+  ) );
+  $cmb_user->add_field( array(
+    'name'    => __( 'Elected Position', 'cmb2' ),
+    'id'      => $prefix . 'user_elected',
+    'type'    => 'select',
+    'options' => $GLOBALS['elected_positions']
+  ) );
+  $cmb_user->add_field( array(
+    'name'    => __( 'Appointed Position', 'cmb2' ),
+    'id'      => $prefix . 'user_appointed',
+    'type'    => 'select',
+    'options' => $GLOBALS['appointed_positions']
+  ) );
+}
+add_action( 'cmb2_init', 'user_meta_boxes' );
