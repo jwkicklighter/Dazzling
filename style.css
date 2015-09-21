@@ -1112,3 +1112,31 @@ p.logged-in-as {
 .cfa-button:hover a {
     color: #09268a;
 }
+
+/* =Password Protected Posts
+----------------------------------------------- */
+
+.password-protected-form {
+  font-size: 18px;
+  text-align: center;
+}
+
+.password-protected-form .password-text {
+  font-size: 24px;
+}
+
+.password-protected-form .input-wrapper {
+  margin-top: 20px;
+  margin-right: -10px;
+}
+
+.password-protected-form .input-wrapper label {
+  margin-right: 10px;
+}
+
+.password-protected-form .input-wrapper input {
+  margin-right: 10px;
+}
+
+.password-label {
+}
