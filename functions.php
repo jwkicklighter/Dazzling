@@ -289,9 +289,12 @@ function resource_list_shortcode( $atts, $content = null ) {
 	$a = shortcode_atts( array(
 		'title' => ''
 	), $atts );
-	$title = ($a['title'] == '' ? '' : '<p>' . $a['title'] . '</p>');
+	$title = ($a['title'] == '' ? '' : '<h1>' . $a['title'] . '</h1>');
+	$section_start = '<div class="resources-list">';
+	$section_end = '</div>';
 	$content = parse_shortcode_content($content);
-	return $title . '<ul>' . do_shortcode($content) . '</ul>';
+
+	return $section_start . $title . '<ul>' . do_shortcode($content) . '</ul>' . $section_end;
 }
 add_shortcode( 'resource_list', 'resource_list_shortcode' );
 
@@ -324,6 +327,35 @@ function resource_shortcode( $atts ) {
 }
 add_shortcode( 'resource', 'resource_shortcode' );
 
+// Announcements
+function announcements_shortcode( $atts, $content = null ) {
+  $a = shortcode_atts( array(
+		'title' => ''
+  ), $atts );
+
+	$title = ($a['title'] == '' ? '' : '<h1>' . $a['title'] . '</h1>');
+	$section_start = '<div class="resources-announcements">';
+	$section_end = '</div>';
+	$content = parse_shortcode_content($content);
+
+	return $section_start . $title . do_shortcode($content) . $section_end;
+}
+add_shortcode( 'announcements', 'announcements_shortcode' );
+
+// Announcement item
+function announcement_item_shortcode( $atts, $content = null ) {
+  $a = shortcode_atts( array(
+		'title' => ''
+  ), $atts );
+
+	$title = ($a['title'] == '' ? '' : '<h1>' . $a['title'] . '</h1>');
+	$section_start = '<hr /><p class="resources-announcement">';
+	$section_end = '</p>';
+
+	return $section_start . $title . $content . $section_end;
+}
+add_shortcode( 'announcement', 'announcement_item_shortcode' );
+
 function parse_shortcode_content( $content ) {
 
     /* Parse nested shortcodes and add formatting. */
@@ -342,3 +374,8 @@ function parse_shortcode_content( $content ) {
 
     return $content;
 }
+
+function blank($title) {
+	return '%s';
+}
+add_filter('protected_title_format', 'blank');
