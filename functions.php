@@ -266,3 +266,66 @@ if ( class_exists( 'jigoshop' ) ) {
  */
 require get_template_directory() . '/inc/jigoshop-setup.php';
 }
+
+/**
+ * Shortcodes
+ */
+
+// Resource list
+function resource_list_shortcode( $atts, $content = null ) {
+	$a = shortcode_atts( array(
+		'title' => ''
+	), $atts );
+	$title = ($a['title'] == '' ? '' : '<p>' . $a['title'] . '</p>');
+	$content = parse_shortcode_content($content);
+	return $title . '<ul>' . do_shortcode($content) . '</ul>';
+}
+add_shortcode( 'resource_list', 'resource_list_shortcode' );
+
+// Resource item
+function resource_shortcode( $atts ) {
+  $a = shortcode_atts( array(
+		'title' => '',
+    'id' => '',
+    'url' => '',
+  ), $atts );
+
+	$anchor_start = '<a title="Opens in New Tab" target="_blank" href="';
+	$anchor_end = '">';
+
+	ob_start();
+	if ($a['title'] == '') { // Included no title
+		return;
+	} else if ($a['id'] == '' && $a['url'] == '') { // Included no params
+		return;
+	} else if ($a['id']== '') { // Included url param
+		echo '<li>';
+		echo $anchor_start . $a['url'] . $anchor_end . $a['title'] . '</a>';
+		echo '</li>';
+	} else { // Included ID param
+		echo '<li>';
+		echo $anchor_start . get_permalink(intval($a['id'])) . $anchor_end . $a['title'] . '</a>';
+		echo '</li>';
+	}
+	return ob_get_clean();
+}
+add_shortcode( 'resource', 'resource_shortcode' );
+
+function parse_shortcode_content( $content ) {
+
+    /* Parse nested shortcodes and add formatting. */
+    $content = trim( wpautop( do_shortcode( $content ) ) );
+
+    /* Remove '</p>' from the start of the string. */
+    if ( substr( $content, 0, 4 ) == '</p>' )
+        $content = substr( $content, 4 );
+
+    /* Remove '<p>' from the end of the string. */
+    if ( substr( $content, -3, 3 ) == '<p>' )
+        $content = substr( $content, 0, -3 );
+
+    /* Remove any instances of '<p></p>'. */
+    $content = str_replace( array( '<p></p>' ), '', $content );
+
+    return $content;
+}
