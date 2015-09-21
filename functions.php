@@ -8,10 +8,10 @@
 /**
  * Load Live Reload script when on localhost
 **/
-if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
-  wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
-  wp_enqueue_script('livereload');
-}
+// if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
+//   wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
+//   wp_enqueue_script('livereload');
+// }
 
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -266,3 +266,116 @@ if ( class_exists( 'jigoshop' ) ) {
  */
 require get_template_directory() . '/inc/jigoshop-setup.php';
 }
+
+// Change password styling
+function my_password_form() {
+    global $post;
+    $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
+    $o = '<form class="password-protected-form" action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post">
+    ' . __( "<span class=\"password-text\">This content is restricted, please enter the password to continue.</span>" ) . '
+    <div class="input-wrapper"><label class="password-label" for="' . $label . '">' . __( "Password:" ) . ' </label><input name="post_password" id="' . $label . '" type="password" size="20" maxlength="20" /><input type="submit" name="Submit" value="' . esc_attr__( "Submit" ) . '" /></div>
+    </form>
+    ';
+    return $o;
+}
+add_filter( 'the_password_form', 'my_password_form' );
+
+/**
+ * Shortcodes
+ */
+
+// Resource list
+function resource_list_shortcode( $atts, $content = null ) {
+	$a = shortcode_atts( array(
+		'title' => ''
+	), $atts );
+	$title = ($a['title'] == '' ? '' : '<h1>' . $a['title'] . '</h1>');
+	$section_start = '<div class="resources-list">';
+	$section_end = '</div>';
+	$content = parse_shortcode_content($content);
+
+	return $section_start . $title . '<ul>' . do_shortcode($content) . '</ul>' . $section_end;
+}
+add_shortcode( 'resource_list', 'resource_list_shortcode' );
+
+// Resource item
+function resource_shortcode( $atts ) {
+  $a = shortcode_atts( array(
+		'title' => '',
+    'id' => '',
+    'url' => '',
+  ), $atts );
+
+	$anchor_start = '<a title="Opens in New Tab" target="_blank" href="';
+	$anchor_end = '">';
+
+	ob_start();
+	if ($a['title'] == '') { // Included no title
+		return;
+	} else if ($a['id'] == '' && $a['url'] == '') { // Included no params
+		return;
+	} else if ($a['id']== '') { // Included url param
+		echo '<li>';
+		echo $anchor_start . $a['url'] . $anchor_end . $a['title'] . '</a>';
+		echo '</li>';
+	} else { // Included ID param
+		echo '<li>';
+		echo $anchor_start . get_permalink(intval($a['id'])) . $anchor_end . $a['title'] . '</a>';
+		echo '</li>';
+	}
+	return ob_get_clean();
+}
+add_shortcode( 'resource', 'resource_shortcode' );
+
+// Announcements
+function announcements_shortcode( $atts, $content = null ) {
+  $a = shortcode_atts( array(
+		'title' => ''
+  ), $atts );
+
+	$title = ($a['title'] == '' ? '' : '<h1>' . $a['title'] . '</h1>');
+	$section_start = '<div class="resources-announcements">';
+	$section_end = '</div>';
+	$content = parse_shortcode_content($content);
+
+	return $section_start . $title . do_shortcode($content) . $section_end;
+}
+add_shortcode( 'announcements', 'announcements_shortcode' );
+
+// Announcement item
+function announcement_item_shortcode( $atts, $content = null ) {
+  $a = shortcode_atts( array(
+		'title' => ''
+  ), $atts );
+
+	$title = ($a['title'] == '' ? '' : '<h1>' . $a['title'] . '</h1>');
+	$section_start = '<hr /><p class="resources-announcement">';
+	$section_end = '</p>';
+
+	return $section_start . $title . $content . $section_end;
+}
+add_shortcode( 'announcement', 'announcement_item_shortcode' );
+
+function parse_shortcode_content( $content ) {
+
+    /* Parse nested shortcodes and add formatting. */
+    $content = trim( wpautop( do_shortcode( $content ) ) );
+
+    /* Remove '</p>' from the start of the string. */
+    if ( substr( $content, 0, 4 ) == '</p>' )
+        $content = substr( $content, 4 );
+
+    /* Remove '<p>' from the end of the string. */
+    if ( substr( $content, -3, 3 ) == '<p>' )
+        $content = substr( $content, 0, -3 );
+
+    /* Remove any instances of '<p></p>'. */
+    $content = str_replace( array( '<p></p>' ), '', $content );
+
+    return $content;
+}
+
+function blank($title) {
+	return '%s';
+}
+add_filter('protected_title_format', 'blank');

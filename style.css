@@ -330,7 +330,7 @@ h1.entry-title.resources-title {
   color: black;
 }
 
-.resources-content p {
+.resources-content h1 {
   margin-bottom: 0;
   padding-bottom: 0;
   font-weight: bold;
@@ -354,6 +354,21 @@ h1.entry-title.resources-title {
 .resources-content ul li a {
   font-weight: normal;
   font-size: 18px;
+}
+
+.resources-announcements, .resources-list {
+  margin-bottom: 20px;
+  background-color: rgba(9, 38, 138, 0.1);
+  padding: 1px 20px 10px;
+}
+
+.resources-announcements hr {
+  border-color: rgba(9, 38, 138, 0.3);
+}
+
+.resources-announcement {
+  color: black;
+  font-size: 16px;
 }
 
 .rush-content .page-header {
@@ -1111,4 +1126,32 @@ p.logged-in-as {
 }
 .cfa-button:hover a {
     color: #09268a;
+}
+
+/* =Password Protected Posts
+----------------------------------------------- */
+
+.password-protected-form {
+  font-size: 18px;
+  text-align: center;
+}
+
+.password-protected-form .password-text {
+  font-size: 24px;
+}
+
+.password-protected-form .input-wrapper {
+  margin-top: 20px;
+  margin-right: -10px;
+}
+
+.password-protected-form .input-wrapper label {
+  margin-right: 10px;
+}
+
+.password-protected-form .input-wrapper input {
+  margin-right: 10px;
+}
+
+.password-label {
 }
