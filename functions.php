@@ -306,7 +306,7 @@ function resource_shortcode( $atts ) {
     'url' => '',
   ), $atts );
 
-	$anchor_start = '<a title="Opens in New Tab" target="_blank" href="';
+	$anchor_start = '&bull;&nbsp; <a title="Opens in New Tab" target="_blank" href="';
 	$anchor_end = '">';
 
 	ob_start();

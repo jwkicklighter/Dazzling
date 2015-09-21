@@ -331,7 +331,7 @@ h1.entry-title.resources-title {
 }
 
 .resources-content h1 {
-  margin-bottom: 0;
+  margin-bottom: 10px;
   padding-bottom: 0;
   font-weight: bold;
   font-size: 28px;
