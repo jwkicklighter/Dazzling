@@ -7,9 +7,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<!-- <header class="entry-header page-header"> -->
-		<!-- <h1 class="entry-title resources-title"><?php the_title(); ?></h1> -->
-	<!-- </header><!-- .entry-header -->
+	<header class="entry-header page-header">
+		<h1 class="entry-title resources-title"><?php the_title(); ?></h1>
+	 </header><!-- .entry-header -->
 
 	<div class="entry-content resources-content">
 		<?php the_content(); ?>
