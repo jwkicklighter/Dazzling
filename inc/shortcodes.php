@@ -92,7 +92,7 @@ function agenda_shortcode( $atts, $content = null ) {
 }
 add_shortcode( 'agenda', 'agenda_shortcode' );
 
-// Announcement item
+// Calendar agenda item
 function agenda_item_shortcode( $atts, $content = null ) {
   $a = shortcode_atts( array(
 		'name' => '',
