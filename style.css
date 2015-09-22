@@ -361,6 +361,7 @@ textarea {
   background-color: #e8e8e8;
   padding: 1px 20px 10px;
   color: rgb(56, 59, 59);
+  border-radius: 5px;
 }
 
 .resources-announcements hr {
