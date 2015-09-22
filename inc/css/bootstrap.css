@@ -1058,6 +1058,7 @@ th {
   content: "\e260";
 }
 * {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
