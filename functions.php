@@ -289,7 +289,7 @@ function resource_list_shortcode( $atts, $content = null ) {
 	$a = shortcode_atts( array(
 		'title' => ''
 	), $atts );
-	$title = ($a['title'] == '' ? '' : '<h1>' . $a['title'] . '</h1>');
+	$title = ($a['title'] == '' ? '' : '<h2 class="resource-title">' . $a['title'] . '</h2>');
 	$section_start = '<div class="resources-list">';
 	$section_end = '</div>';
 	$content = parse_shortcode_content($content);
@@ -333,7 +333,7 @@ function announcements_shortcode( $atts, $content = null ) {
 		'title' => ''
   ), $atts );
 
-	$title = ($a['title'] == '' ? '' : '<h1>' . $a['title'] . '</h1>');
+	$title = ($a['title'] == '' ? '' : '<h2 class="resource-title">' . $a['title'] . '</h2>');
 	$section_start = '<div class="resources-announcements">';
 	$section_end = '</div>';
 	$content = parse_shortcode_content($content);
@@ -348,7 +348,7 @@ function announcement_item_shortcode( $atts, $content = null ) {
 		'title' => ''
   ), $atts );
 
-	$title = ($a['title'] == '' ? '' : '<h1>' . $a['title'] . '</h1>');
+	$title = ($a['title'] == '' ? '' : '<h4 class="resource-title">' . $a['title'] . '</h4>');
 	$section_start = '<hr /><p class="resources-announcement">';
 	$section_end = '</p>';
 
