@@ -77,6 +77,36 @@ function announcement_item_shortcode( $atts, $content = null ) {
 }
 add_shortcode( 'announcement', 'announcement_item_shortcode' );
 
+// Calendar agenda
+function agenda_shortcode( $atts, $content = null ) {
+  $a = shortcode_atts( array(
+		'title' => ''
+  ), $atts );
+
+	$title = ($a['title'] == '' ? '' : '<strong>' . $a['title'] . '</strong>');
+	$section_start = '<ul class="calendar_agenda">';
+	$section_end = '</ul>';
+	$content = parse_shortcode_content($content);
+
+	return $title . $section_start . do_shortcode($content) . $section_end;
+}
+add_shortcode( 'agenda', 'agenda_shortcode' );
+
+// Announcement item
+function agenda_item_shortcode( $atts, $content = null ) {
+  $a = shortcode_atts( array(
+		'name' => '',
+		'time' => '',
+		'location' => ''
+  ), $atts );
+	$section_start = '<li>';
+	$section_end = '</li>';
+	$location = ($a['location'] == '' ? '' : ' @ ' . $a['location']);
+
+	return $section_start . $a['name'] . '<br />' . $a['time'] . $location . $section_end;
+}
+add_shortcode( 'agenda_item', 'agenda_item_shortcode' );
+
 // Helper function for dealing with <p> tags in recursive shortcodes
 function parse_shortcode_content( $content ) {
 
