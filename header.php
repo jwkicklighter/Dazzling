@@ -59,6 +59,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php include_once("analytics.php"); ?>
 <div id="page" class="hfeed site">
 
 	<nav class="navbar navbar-default" role="navigation">
