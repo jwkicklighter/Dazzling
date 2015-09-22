@@ -389,7 +389,7 @@ if (!function_exists('get_dazzling_theme_options'))  {
     }
     $typography = of_get_option('main_body_typography');
     if ( $typography ) {
-      echo '.entry-content {font-family: ' . $typography['face'] . '; font-size:' . $typography['size'] . '; font-weight: ' . $typography['style'] . '; color:'.$typography['color'] . ';}';
+      echo '.entry-content {font-family: ' . $typography['face'] . ', sans-serif; font-size:' . $typography['size'] . '; font-weight: ' . $typography['style'] . '; color:'.$typography['color'] . ';}';
     }
     if ( of_get_option('custom_css')) {
       echo of_get_option( 'custom_css', 'no entry' );
