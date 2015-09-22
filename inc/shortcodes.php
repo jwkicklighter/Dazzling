@@ -77,6 +77,7 @@ function announcement_item_shortcode( $atts, $content = null ) {
 }
 add_shortcode( 'announcement', 'announcement_item_shortcode' );
 
+// Helper function for dealing with <p> tags in recursive shortcodes
 function parse_shortcode_content( $content ) {
 
     /* Parse nested shortcodes and add formatting. */
