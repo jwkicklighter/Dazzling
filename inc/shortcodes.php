@@ -107,6 +107,21 @@ function agenda_item_shortcode( $atts, $content = null ) {
 }
 add_shortcode( 'agenda_item', 'agenda_item_shortcode' );
 
+function shortcode_helper( $atts, $content = null ) {
+	echo '<br /><div class="postbox-container">';
+	echo '<div class="postbox">';
+	echo '<h3 class="hndle">Eta Sigma Shortcode Examples</h3>';
+	echo '<div class="inside">';
+
+		echo '<h4 style="margin-bottom: 5px;">Agenda Item</h4>';
+		echo '[agenda_item name="Publications Commitee" time="Thu 4:30p" location="UCF Student Union"]';
+		echo '<h4 style="margin-bottom: 5px;">Resource Item</h4>';
+		echo '[resource title="National Song" url="http://localhost/etasigma/wp-content/uploads/2015/04/NationalSong.pdf"]';
+
+	echo '</div></div></div>';
+}
+add_action( 'edit_form_after_editor', 'shortcode_helper' );
+
 // Helper function for dealing with <p> tags in recursive shortcodes
 function parse_shortcode_content( $content ) {
 
