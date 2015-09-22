@@ -326,7 +326,7 @@ textarea {
   font-weight: bold;
 }
 
-h1.entry-title.resources-title {
+.entry-title.resources-title, .resource-title {
   color: rgb(56, 59, 59);;
 }
 
@@ -369,6 +369,10 @@ h1.entry-title.resources-title {
 
 .resources-announcement {
   font-size: 16px;
+}
+
+.resources-announcements h2.resource-title {
+  text-align: center;
 }
 
 .rush-content .page-header {
