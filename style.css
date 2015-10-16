@@ -4,7 +4,7 @@ Theme URI: http://colorlib.com/wp/themes/dazzling
 Author: Colorlib, Jordan Kicklighter
 Author URI: http://colorlib.com/wp/
 Description: Modified version of the Dazzling theme for the Eta Sigma chapter of Kappa Kappa Psi
-Version: 1.0
+Version: 2.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: dazzling
@@ -324,6 +324,72 @@ textarea {
 }
 .calendar-sidebar a {
   font-weight: bold;
+}
+
+.entry-title.resources-title, .resource-title {
+  color: rgb(56, 59, 59);;
+}
+
+.resources-content h1 {
+  margin-bottom: 10px;
+  padding-bottom: 0;
+  font-weight: bold;
+  font-size: 28px;
+  color: rgb(56, 59, 59);
+}
+
+.resources-content ul {
+  padding-left: 10px;
+  margin-bottom: 30px;
+}
+
+.resources-content ul:last-child {
+  margin-bottom: 0;
+}
+
+.resources-content ul li {
+  list-style-type: none;
+}
+
+.resources-content ul li a {
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.resources-announcements, .resources-list {
+  margin-bottom: 20px;
+  background-color: #e8e8e8;
+  padding: 1px 20px 10px;
+  color: rgb(56, 59, 59);
+  border-radius: 5px;
+}
+
+.resources-announcements hr {
+  border-color: rgb(204, 204, 204);
+}
+
+.resources-announcement {
+  font-size: 16px;
+}
+
+.resources-announcements h2.resource-title {
+  text-align: center;
+}
+
+.rush-content .page-header {
+  text-align: center;
+}
+
+.rush-content ul {
+  padding-left: 0px;
+}
+
+.rush-content li {
+  list-style: none;
+}
+
+.rush-content img {
+  margin-top: 21px;
 }
 
 /* =Post styling
@@ -690,7 +756,14 @@ li.recentcomments {
 .navbar > .container .navbar-brand {
   color: #fff;
   font-size: 24px;
-  margin: 8px 0;
+  margin-top: 10px;
+  padding: 0;
+}
+.navbar > .container .navbar-brand .title {
+  font-size: 22px;
+}
+.navbar > .container .navbar-brand .tagline {
+  font-size: 16px;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
@@ -711,23 +784,25 @@ li.recentcomments {
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus,
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus,
-.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+.navbar-default .navbar-nav > .open > a:focus {
   color: #000;
   background-color: #fff;
 }
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+  background-color: rgba(166, 166, 166, 0.4);
+}
 .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-  color: #999;
+  color: #000;
 }
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
   border-left: 1px solid rgba(0, 0, 0, 0.1);
 }
 .dropdown-menu > li > a {
   padding: 14px 20px;
-  color: #999;
+  color: #000;
 }
 .dropdown-menu,
 .dropdown-menu > .active > a,
@@ -737,8 +812,9 @@ li.recentcomments {
 }
 .dropdown-menu > .active > a,
 .navbar-default .navbar-nav .open .dropdown-menu > .active > a {
-  background-color: #09268a;
-  color: #fff;
+  background-color: rgba(166, 166, 166, 0.4);
+  /*background-color: #09268a;*/
+  /*color: #fff;*/
 }
 
 .dropdown-menu .divider {
@@ -981,6 +1057,13 @@ p.logged-in-as {
   }
   .navbar > .container .navbar-brand {
     margin: 0;
+    margin-left: 8px;
+  }
+  .navbar > .container .navbar-brand .title {
+    font-size: 18px;
+  }
+  .navbar > .container .navbar-brand .tagline {
+    font-size: 14px;
   }
   .navbar-default .navbar-nav > li > a {
     line-height: 20px;
@@ -1065,4 +1148,32 @@ p.logged-in-as {
 }
 .cfa-button:hover a {
     color: #09268a;
+}
+
+/* =Password Protected Posts
+----------------------------------------------- */
+
+.password-protected-form {
+  font-size: 18px;
+  text-align: center;
+}
+
+.password-protected-form .password-text {
+  font-size: 24px;
+}
+
+.password-protected-form .input-wrapper {
+  margin-top: 20px;
+  margin-right: -10px;
+}
+
+.password-protected-form .input-wrapper label {
+  margin-right: 10px;
+}
+
+.password-protected-form .input-wrapper input {
+  margin-right: 10px;
+}
+
+.password-label {
 }

@@ -59,6 +59,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php include_once("analytics.php"); ?>
 <div id="page" class="hfeed site">
 
 	<nav class="navbar navbar-default" role="navigation">
@@ -82,7 +83,15 @@
 				<?php if( !get_header_image() ) : ?>
 
 					<div id="logo">
-						<span class="site-name"><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
+						<span class="site-name">
+							<a class="navbar-brand"
+									href="<?php echo esc_url( home_url( '/' ) ); ?>"
+									title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
+									rel="home">
+										<span class="title"><?php bloginfo( 'name' ); ?></span><br />
+										<span class="tagline"><?php bloginfo( 'description' ); ?></span>
+							</a>
+						</span>
 					</div><!-- end of #logo -->
 
 				<?php endif; // header image was removed (again) ?>

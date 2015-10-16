@@ -1,16 +1,14 @@
-![Dazzling WordPress Theme](http://colorlib.com/wp/wp-content/uploads/sites/2/screenshot.png "Dazzling Theme Screenshot")
+#About Eta Sigma Theme#
+
+This theme is based on Dazzling (more info below) from the official Wordpress themes collection. It is modified for the Eta Sigma chapter of Kappa Kappa Psi.
 
 #About Dazzling WordPress Theme#
 
 Dazzling is a clean, modern, minimal and fully responsive flat design WordPress WooCommerce theme well suited for blogs, static and ecommerce websites. Theme can be used for travel, corporate, portfolio, photography, green thinking, nature, health, personal and any other creative and minimalistic style website. Dazzling theme is highly customizable with unlimited color options, slider, call for action button, several widget areas and much more that can be adjusted via Theme Options. The theme is built using Bootstrap 3, which makes it responsive and mobile friendly. It features infinite scroll, SEO friendly structure, logo upload, full-screen slider, call for action section, social media icons, popular post widget and translation ready setup. This theme supports WooCommerce and Jigoshop ecommerce plugins.  Dazzling is also available in Mexican Spanish, Brazilian Portuguese, Finnish, Swedish, Dutch, Hungarian, German, Persian and Polish. It is probably the best free WordPress theme built for eStores and business websites.
 
-For questions, comments or bug reports, visit [Colorlib support forum](http://colorlib.com/wp/forums).
-
 #Installation#
 
-You can install the theme through the WordPress installer under "Themes" > "Install themes" by searching for "Dazzling".
-
-Alternatively you can download archive file, unzip it and move the unzipped contents to the "wp-content/themes" folder of your WordPress installation. You will then be able to activate the theme.
+You can download archive file, unzip it and move the unzipped contents to the "wp-content/themes" folder of your WordPress installation. You will then be able to activate the theme.
 
 Afterwards you can continue theme setup and customization via WordPress Dashboard - Appearance - Theme Options. For detailed theme documentation, please [see here](http://colorlib.com/wp/support/dazzling).
 
@@ -32,17 +30,17 @@ Afterwards you can continue theme setup and customization via WordPress Dashboar
 * WooCommerce support
 * Jigoshop support
 
-#Documentation#
+#Original Documentation#
 
 Theme documentation [is available here](http://colorlib.com/wp/support/dazzling)
 
 #Copyright notice#
 
-* Author: Aigars Silkalns [@AigarsSilkalns](https://twitter.com/AigarsSilkalns)
-* Author URI: http://colorlib.com/wp/
+* Original Author: Aigars Silkalns [@AigarsSilkalns](https://twitter.com/AigarsSilkalns)
+* Original Author URI: http://colorlib.com/wp/
 * License: GNU General Public License v3.0
 * License URI: http://www.gnu.org/licenses/gpl.html
-* Dazzling theme, Copyright 2014-2015 http://colorlib.com
+* Dazzling theme, Copyright 2014-2015 http://colorlib.com, Copyright 2015 Eta Sigma Chapter
 * Dazzling WordPress theme is distributed under the terms of the GNU GPL
 * Dazzling is based on [Underscores](http://underscores.me/), (C) 2012-2015 Automattic, Inc.
 
@@ -52,11 +50,21 @@ Dazzling theme uses:
 
 * [FontAwesome](http://fontawesome.io) licensed under the SIL OFL 1.1 (http://scripts.sil.org/OFL)
 * [Bootstrap](http://getbootstrap.com/) licensed under [MIT license](https://github.com/twbs/bootstrap/blob/master/LICENSE)
-* [WP-Bootstrap-NavWalker](https://github.com/twittem/wp-bootstrap-navwalker) licensed under the GPLv2 license 
-* [Options Framework](https://github.com/devinsays/options-framework-theme) by WP Theming licensed under the GPLv2 license 
-* [FlexSlider](https://github.com/woothemes/FlexSlider) by WooThemes licensed under the GPLv2 license 
+* [WP-Bootstrap-NavWalker](https://github.com/twittem/wp-bootstrap-navwalker) licensed under the GPLv2 license
+* [Options Framework](https://github.com/devinsays/options-framework-theme) by WP Theming licensed under the GPLv2 license
+* [FlexSlider](https://github.com/woothemes/FlexSlider) by WooThemes licensed under the GPLv2 license
 
 #Changelog#
+
+####2.1.0####
+
+* Added Resources CPT
+* Added Announcements CPT
+* Minor adjustment to header for tagline support
+
+####2.0.0####
+
+* Starting at version 2.0.0 with Eta Sigma customizations
 
 ####1.4.4 - 02.03.2015####
 
@@ -87,7 +95,7 @@ Dazzling theme uses:
 
 ####1.3.7 - 09.11.2014####
 
-* Added different content width for Full-width template for plugins that depends on it to work properly. 
+* Added different content width for Full-width template for plugins that depends on it to work properly.
 
 ####1.3.6 - 15.10.2014####
 
