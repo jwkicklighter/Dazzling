@@ -784,23 +784,25 @@ li.recentcomments {
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus,
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus,
-.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+.navbar-default .navbar-nav > .open > a:focus {
   color: #000;
   background-color: #fff;
 }
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+  background-color: rgba(166, 166, 166, 0.4);
+}
 .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-  color: #999;
+  color: #000;
 }
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
   border-left: 1px solid rgba(0, 0, 0, 0.1);
 }
 .dropdown-menu > li > a {
   padding: 14px 20px;
-  color: #999;
+  color: #000;
 }
 .dropdown-menu,
 .dropdown-menu > .active > a,
@@ -810,8 +812,9 @@ li.recentcomments {
 }
 .dropdown-menu > .active > a,
 .navbar-default .navbar-nav .open .dropdown-menu > .active > a {
-  background-color: #09268a;
-  color: #fff;
+  background-color: rgba(166, 166, 166, 0.4);
+  /*background-color: #09268a;*/
+  /*color: #fff;*/
 }
 
 .dropdown-menu .divider {
