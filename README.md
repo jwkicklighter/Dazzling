@@ -58,6 +58,12 @@ Dazzling theme uses:
 
 #Changelog#
 
+####2.1.0####
+
+* Added Resources CPT
+* Added Announcements CPT
+* Minor adjustment to header for tagline support
+
 ####2.0.0####
 
 * Starting at version 2.0.0 with Eta Sigma customizations
