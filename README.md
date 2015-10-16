@@ -52,11 +52,15 @@ Dazzling theme uses:
 
 * [FontAwesome](http://fontawesome.io) licensed under the SIL OFL 1.1 (http://scripts.sil.org/OFL)
 * [Bootstrap](http://getbootstrap.com/) licensed under [MIT license](https://github.com/twbs/bootstrap/blob/master/LICENSE)
-* [WP-Bootstrap-NavWalker](https://github.com/twittem/wp-bootstrap-navwalker) licensed under the GPLv2 license 
-* [Options Framework](https://github.com/devinsays/options-framework-theme) by WP Theming licensed under the GPLv2 license 
-* [FlexSlider](https://github.com/woothemes/FlexSlider) by WooThemes licensed under the GPLv2 license 
+* [WP-Bootstrap-NavWalker](https://github.com/twittem/wp-bootstrap-navwalker) licensed under the GPLv2 license
+* [Options Framework](https://github.com/devinsays/options-framework-theme) by WP Theming licensed under the GPLv2 license
+* [FlexSlider](https://github.com/woothemes/FlexSlider) by WooThemes licensed under the GPLv2 license
 
 #Changelog#
+
+####2.0.0####
+
+* Starting at version 2.0.0 with Eta Sigma customizations
 
 ####1.4.4 - 02.03.2015####
 
@@ -87,7 +91,7 @@ Dazzling theme uses:
 
 ####1.3.7 - 09.11.2014####
 
-* Added different content width for Full-width template for plugins that depends on it to work properly. 
+* Added different content width for Full-width template for plugins that depends on it to work properly.
 
 ####1.3.6 - 15.10.2014####
 
